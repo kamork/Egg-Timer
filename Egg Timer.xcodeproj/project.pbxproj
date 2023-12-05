@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		565050432B1F859B00261632 /* alarm_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 565050422B1F859B00261632 /* alarm_sound.mp3 */; };
 		565A29332B12329B0020C201 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565A29322B12329B0020C201 /* AppDelegate.swift */; };
 		565A29352B12329B0020C201 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565A29342B12329B0020C201 /* SceneDelegate.swift */; };
 		565A29372B12329B0020C201 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565A29362B12329B0020C201 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		565050422B1F859B00261632 /* alarm_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = alarm_sound.mp3; path = "../../EggTimer-iOS13/EggTimer/alarm_sound.mp3"; sourceTree = "<group>"; };
 		565A292F2B12329B0020C201 /* Egg Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Egg Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		565A29322B12329B0020C201 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		565A29342B12329B0020C201 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				565A29402B12329C0020C201 /* LaunchScreen.storyboard */,
 				565A29432B12329C0020C201 /* Info.plist */,
 				565A293B2B12329B0020C201 /* Egg_Timer.xcdatamodeld */,
+				565050422B1F859B00261632 /* alarm_sound.mp3 */,
 			);
 			path = "Egg Timer";
 			sourceTree = "<group>";
@@ -130,6 +133,7 @@
 			files = (
 				565A29422B12329C0020C201 /* LaunchScreen.storyboard in Resources */,
 				565A293F2B12329C0020C201 /* Assets.xcassets in Resources */,
+				565050432B1F859B00261632 /* alarm_sound.mp3 in Resources */,
 				565A293A2B12329B0020C201 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
