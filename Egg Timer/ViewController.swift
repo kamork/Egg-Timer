@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     @IBAction func hardnessSelected(_ sender: UIButton) {
                 
         timer.invalidate()
+        secondsPassed = 0
         let hardness = sender.titleLabel?.text
         totalTime = eggTimes[hardness!]!
         
