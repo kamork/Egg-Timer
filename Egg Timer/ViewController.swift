@@ -41,6 +41,7 @@ class ViewController: UIViewController {
         } else {
             timer.invalidate()
             titleLabel.text = "Done!"
+//            progressBar.isHidden = true
             playSound()
         }
     }
