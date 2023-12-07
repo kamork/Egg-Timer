@@ -20,10 +20,10 @@
                                 <rect key="frame" x="16" y="59" width="361" height="759"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cio-4m-fjt" userLabel="Title View">
-                                        <rect key="frame" x="0.0" y="0.0" width="361" height="160.66666666666666"/>
+                                        <rect key="frame" x="20.666666666666657" y="0.0" width="320" height="160.66666666666666"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you like your eggs?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="tKE-I3-U3t">
-                                                <rect key="frame" x="0.0" y="0.0" width="361" height="160.66666666666666"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="160.66666666666666"/>
                                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="30"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -143,16 +143,22 @@
                                         <rect key="frame" x="0.0" y="598.66666666666663" width="361" height="160.33333333333337"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giw-Ps-fAX">
-                                                <rect key="frame" x="0.0" y="63" width="180.66666666666666" height="34.333333333333343"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="180.66666666666666" height="160.33333333333334"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Cancel" titleAlignment="center"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWV-rC-bEl">
-                                                <rect key="frame" x="180.66666666666663" y="63" width="180.33333333333337" height="34.333333333333343"/>
+                                                <rect key="frame" x="180.66666666666663" y="0.0" width="180.33333333333337" height="160.33333333333334"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Restart"/>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="giw-Ps-fAX" secondAttribute="bottom" id="AFq-3M-Bgw"/>
+                                            <constraint firstItem="tWV-rC-bEl" firstAttribute="top" secondItem="6sJ-qI-6je" secondAttribute="top" id="Oxc-Qr-gA2"/>
+                                            <constraint firstItem="giw-Ps-fAX" firstAttribute="top" secondItem="6sJ-qI-6je" secondAttribute="top" id="WSZ-m6-V8z"/>
+                                            <constraint firstAttribute="bottom" secondItem="tWV-rC-bEl" secondAttribute="bottom" id="YHe-0z-Iow"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
