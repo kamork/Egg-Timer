@@ -51,6 +51,17 @@ class ViewController: UIViewController {
         resetTimer()
     }
     
+    
+    @IBAction func controlButtonPressed(_ sender: UIButton) {
+        if controlButton.titleLabel?.text == "Pause"
+        {
+            controlButton.setTitle("Resume", for: .normal)
+        }
+        else if controlButton.titleLabel?.text == "Resume" {
+            controlButton.setTitle("Pause", for: .normal)
+        }
+    }
+    
     func resetTimer() {
         timer.invalidate()
         progressBar.progress = 0.0
