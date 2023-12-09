@@ -24,8 +24,7 @@ class ViewController: UIViewController {
     
     @IBAction func hardnessSelected(_ sender: UIButton) {
                 
-        timer.invalidate()
-        secondsPassed = 0
+        resetTimer()
         let hardness = sender.titleLabel?.text
         totalTime = eggTimes[hardness!]!
         
@@ -41,11 +40,21 @@ class ViewController: UIViewController {
             
             secondsPassed += 1
         } else {
-            timer.invalidate()
+            resetTimer()
             titleLabel.text = "Done!"
-//            progressBar.isHidden = true
+//          progressBar.isHidden = true
             playSound()
         }
+    }
+    
+    @IBAction func cancelButtonPressed(_ sender: UIButton) {
+        resetTimer()
+    }
+    
+    func resetTimer() {
+        timer.invalidate()
+        progressBar.progress = 0.0
+        secondsPassed = 0
     }
     
     func playSound() {
