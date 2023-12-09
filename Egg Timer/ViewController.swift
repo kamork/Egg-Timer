@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var controlButton: UIButton!
     
     let eggTimes = ["Soft": 300, "Medium": 420, "Hard": 720]
     

@@ -191,6 +191,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cancelButton" destination="giw-Ps-fAX" id="DV6-iT-KNC"/>
+                        <outlet property="controlButton" destination="tWV-rC-bEl" id="buu-bu-oTM"/>
                         <outlet property="progressBar" destination="O0L-UI-roq" id="0xf-p6-U05"/>
                         <outlet property="titleLabel" destination="tKE-I3-U3t" id="sBv-Z9-cjM"/>
                     </connections>
