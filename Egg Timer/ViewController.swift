@@ -23,12 +23,12 @@ class ViewController: UIViewController {
     var player: AVAudioPlayer!
     
     @IBAction func hardnessSelected(_ sender: UIButton) {
-                
-        resetTimer()
+
+        clearTimer()
         let hardness = sender.titleLabel?.text
         totalTime = eggTimes[hardness!]!
         
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        startTimer()
     }
     
     @objc func updateTimer() {
@@ -40,7 +40,6 @@ class ViewController: UIViewController {
             
             secondsPassed += 1
         } else {
-            resetTimer()
             titleLabel.text = "Done!"
 //          progressBar.isHidden = true
             playSound()
@@ -48,24 +47,34 @@ class ViewController: UIViewController {
     }
     
     @IBAction func cancelButtonPressed(_ sender: UIButton) {
-        resetTimer()
+        clearTimer()
     }
     
     
     @IBAction func controlButtonPressed(_ sender: UIButton) {
         if controlButton.titleLabel?.text == "Pause"
         {
+            pauseTimer()
             controlButton.setTitle("Resume", for: .normal)
         }
         else if controlButton.titleLabel?.text == "Resume" {
+            startTimer()
             controlButton.setTitle("Pause", for: .normal)
         }
     }
     
-    func resetTimer() {
+    func startTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+    }
+    
+    func clearTimer() {
         timer.invalidate()
         progressBar.progress = 0.0
         secondsPassed = 0
+    }
+    
+    func pauseTimer() {
+        timer.invalidate()
     }
     
     func playSound() {
