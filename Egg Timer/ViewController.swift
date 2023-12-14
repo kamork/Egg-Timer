@@ -15,18 +15,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var controlButton: UIButton!
     
-    let eggTimes = ["Soft": 300, "Medium": 420, "Hard": 720]
+    let eggTimes = ["Soft": 30, "Medium": 420, "Hard": 720]
     
     var timer = Timer()
     var totalTime = 0
     var secondsPassed = 0
     var player: AVAudioPlayer!
-        
+    
     @IBAction func hardnessSelected(_ sender: UIButton) {
-
+        
         clearTimer()
         let hardness = sender.titleLabel?.text
         progressBar.isHidden = false
+        cancelButton.isHidden = false
+        controlButton.isHidden = false
         totalTime = eggTimes[hardness!]!
         
         startTimer()
@@ -42,14 +44,14 @@ class ViewController: UIViewController {
             secondsPassed += 1
         } else {
             titleLabel.text = "Done!"
-//          progressBar.isHidden = true
+            hideElements()
             playSound()
         }
     }
     
     @IBAction func cancelButtonPressed(_ sender: UIButton) {
         clearTimer()
-        progressBar.isHidden = true
+        hideElements()
     }
     
     
@@ -83,6 +85,12 @@ class ViewController: UIViewController {
         let url = Bundle.main.url(forResource: "alarm_sound", withExtension: "mp3")
         player = try! AVAudioPlayer(contentsOf: url!)
         player.play()
+    }
+    
+    func hideElements() {
+        progressBar.isHidden = true
+        controlButton.isHidden = true
+        cancelButton.isHidden = true
     }
 }
 
