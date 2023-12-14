@@ -21,11 +21,12 @@ class ViewController: UIViewController {
     var totalTime = 0
     var secondsPassed = 0
     var player: AVAudioPlayer!
-    
+        
     @IBAction func hardnessSelected(_ sender: UIButton) {
 
         clearTimer()
         let hardness = sender.titleLabel?.text
+        progressBar.isHidden = false
         totalTime = eggTimes[hardness!]!
         
         startTimer()
@@ -48,6 +49,7 @@ class ViewController: UIViewController {
     
     @IBAction func cancelButtonPressed(_ sender: UIButton) {
         clearTimer()
+        progressBar.isHidden = true
     }
     
     
