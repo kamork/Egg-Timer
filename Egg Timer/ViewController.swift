@@ -42,11 +42,15 @@ class ViewController: UIViewController {
         } else {
             titleLabel.text = "Done!"
             playSound()
+            cancelButton.isEnabled = false
+            controlButton.isEnabled = false
         }
     }
     
     @IBAction func cancelButtonPressed(_ sender: UIButton) {
         clearTimer()
+        cancelButton.isEnabled = false
+        controlButton.isEnabled = false
     }
     
     
@@ -64,6 +68,8 @@ class ViewController: UIViewController {
     
     func startTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        cancelButton.isEnabled = true
+        controlButton.isEnabled = true
     }
     
     func clearTimer() {

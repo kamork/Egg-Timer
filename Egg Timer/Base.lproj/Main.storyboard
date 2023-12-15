@@ -142,7 +142,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6sJ-qI-6je" userLabel="Timer Control Button View">
                                         <rect key="frame" x="0.0" y="575.33333333333337" width="343" height="152.66666666666663"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giw-Ps-fAX">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giw-Ps-fAX">
                                                 <rect key="frame" x="0.0" y="26.333333333333258" width="100" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="hBE-hm-Cdk"/>
@@ -160,7 +160,7 @@
                                                     <action selector="cancelButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N6o-lA-zya"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWV-rC-bEl" userLabel="Pause/Resume">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWV-rC-bEl" userLabel="Pause/Resume">
                                                 <rect key="frame" x="243" y="26.333333333333258" width="100" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="lTC-CV-dEB"/>
